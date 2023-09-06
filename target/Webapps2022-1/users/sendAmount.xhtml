@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title> Transaction Form </title>
+
+</h:head>
+<h:body>
+    <h2>Welcome to Transaction Form</h2>
+    <h:form id="loginForm">
+        Please enter your transaction details
+        <div>
+               <br>
+                    Email: <h:inputText id="Email" label="Email" maxlength="50"  title="Email" value="#{sendBean.email}"/>
+            
+               </br>
+           </div>
+           
+           <div>
+               <br>
+                   Amount <h:inputText id="amount" label="Amount" maxlength="50"  title="Email" value="#{sendBean.amountBeforeFx}"/>
+               </br>
+           </div>
+            
+            <br>
+                <tag>
+            <h:commandButton id="Send" title="Send" label="Send Amount" type="submit" value="Send" action="#{sendBean.send()}" />
+                </tag>
+                
+            <h:commandButton id="Back" title="Back" label="Back" type="submit" value="Back" action="#{sendBean.Back()}" />
+            </br>
+        
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    
+    <title> Admin page</title>
+    <style type="text/css">
+        .validText {
+            color: green;
+        }
+    </style>
+
+<h:body>
+    <h:form>
+    <div id="returnValid">
+       Welcome to the Administrative page
+    </div>
+        
+        <div>
+            <br>
+                <tag>
+            <tr><td><h:commandButton value="View Users" action="#{adminHistoryBean.viewAllUser()}" /></td></tr>
+                </tag>
+       
+            <tr><td><h:commandButton value="View Transactions" action="#{adminHistoryBean.viewAllTransaction()}" /></td></tr>
+            
+            <tr><td><h:commandButton value="logout" action="/index" /></td></tr>
+            </br>
+        </div>
+       
+    
+        
+     
+    </h:form>
+</h:body>
+</h:head>
+</html>

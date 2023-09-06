@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    
+    <title> Online Transaction System</title>
+    <style type="text/css">
+        .validText {
+            color: green;
+        }
+    </style>
+
+<h:body>
+    <h:form>
+    <div id="returnValid">
+        Welcome to Online Transaction System  <tr><td><h:commandButton value="Notification" action="Notification" /></td></tr>
+    </div>
+        <br>
+        Hello, <h:outputText value="#{loginBean.currentUser.fname}  #{loginBean.currentUser.lname}"/>
+        </br>
+        <br>
+        Account balance is: <h:outputText value="#{loginBean.currentUser.balance}"/> 
+        </br>
+        Currency type is   <h:outputText value = "#{loginBean.currentUser.currency}"/>
+        <div>
+            <br>
+                <tag>
+                    <tr><td><h:commandButton value="Send Amount" action="#{historyBean.makePayment()}" /></td></tr>
+                </tag>
+                    <tr><td><h:commandButton value="Request Amount" action="#{historyBean.makeRequest()}" /></td></tr>
+                <tag>
+                    <tr><td><h:commandButton value="Previous Transactions" action="ViewUserTransactions" /></td></tr>
+                 </tag>
+           
+                <tr><td><h:commandButton value="Logout" action="index" /></td></tr>
+            </br>
+        
+       
+        </div>
+        
+     
+    </h:form>
+</h:body>
+</h:head>
+</html>

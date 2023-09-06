@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>REGISTER AS NEW USER</title>
+    </h:head>
+    <h:body>
+        Please enter your to registration detail.
+        <h:form id="comments_form" title="Comments' Form" >
+           <div>
+               <br>
+            First Name: <h:inputText id="f_name" label="First Name" maxlength="30" required="true" requiredMessage="Please enter your first name" title="First Name" value="#{userBean.fname}"/>
+               </br>
+           </div>
+            <div>
+                <br>
+            Last Name : <h:inputText id="l_name" label="Last Name" maxlength="20" required="true" requiredMessage="Please enter your last name" title="Last Name" value="#{userBean.lname}"/>
+                </br>
+            </div>
+            
+              <div>
+                <br>
+                    Currency:             
+                    <h:selectOneMenu value="#{userBean.currency}">
+                        <f:selectItem itemValue = "USD" itemLabel = "USD" /> 
+                        <f:selectItem itemValue = "GBP" itemLabel = "GBP" /> 
+                        <f:selectItem itemValue = "EUR" itemLabel = "EUR" /> 
+                    </h:selectOneMenu>   
+                </br>
+            </div>
+            
+            <div>
+                <br>
+            Email Add : <h:inputText id="Email" label="Email Add" maxlength="15" required="true" requiredMessage="Please enter your Email Address" title="Email Add" value="#{userBean.email}"/>
+                </br>
+            </div>
+            
+            <div>
+                <br>
+            Password  : <h:inputSecret id="Password" label="Password" maxlength="13" required="true" requiredMessage="Please create password" title="Password" value="#{userBean.password}"/>
+                </br>
+            </div>
+            <br>
+                <tag>
+            <h:commandButton id="submit_form" title="Submit Form" label="Submit Form" type="submit" value="Submit Form" action="#{userBean.mySubmit()}" />
+                </tag>
+              
+            </br>
+        </h:form>
+    </h:body>
+</html>
+
+
+
+

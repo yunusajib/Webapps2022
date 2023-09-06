@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Security Example</title>
+    </h:head>
+    <h:body>
+        <div align="left">
+            <h1>Welcome to Online Payment Service</h1>
+        <h3>Hello, please log in details or create new account:</h3>
+        <h:form >
+          <div>  
+               <br>
+                   Email Add : <h:inputText id="Email" label="Email Add" maxlength="30" required="true" requiredMessage="Please enter your Email Address" title="Email Add" value="#{loginBean.email}"/>
+                </br>
+           
+                <br>
+            Password  : <h:inputSecret id="Password" label="Password" maxlength="15" required="true" requiredMessage="Please enter password" title="Password" value="#{loginBean.password}"/>
+                </br>
+            </div>
+  
+           <br>
+ 
+               <h:commandButton value ="Login" action="#{loginBean.checkLogin()}"  />
+            <h:commandButton value ="createAccount" action="#{loginBean.signUp()}"  />  
+             </br>
+        
+        </h:form>
+        </div>
+    </h:body>
+</html>
